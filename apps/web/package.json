@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -22,7 +24,22 @@
     "utils": "workspace:*"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@storybook/addon-essentials": "^7.0.0-beta.19",
+    "@storybook/addon-interactions": "^7.0.0-beta.19",
+    "@storybook/addon-links": "^7.0.0-beta.19",
+    "@storybook/blocks": "^7.0.0-beta.19",
+    "@storybook/nextjs": "^7.0.0-beta.19",
+    "@storybook/react": "^7.0.0-beta.19",
+    "@storybook/react-vite": "^7.0.0-beta.19",
+    "@storybook/testing-library": "^0.0.13",
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "eslint-plugin-storybook": "^0.6.8",
+    "jest-mock": "^29.3.1",
+    "postcss": "^8.4.20",
+    "storybook": "^7.0.0-beta.19",
+    "tsconfig": "workspace:*",
+    "vite": "^4.0.4",
+    "webpack": "^5.75.0"
   }
 }
