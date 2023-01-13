@@ -4,7 +4,7 @@
 // Sadly, this is an only workaround for now.
 
 module.exports = {
-  extends: ['next', 'turbo', 'prettier', 'next/babel'],
+  extends: ['next', 'turbo', 'prettier', 'next/babel', 'next/core-web-vitals'],
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     'react/jsx-key': 'off',
