@@ -33,10 +33,12 @@
     "@storybook/react": "7.0.0-beta.50",
     "@storybook/react-vite": "7.0.0-beta.50",
     "@storybook/testing-library": "^0.0.13",
+    "autoprefixer": "^10.4.13",
     "eslint-config-custom-next": "workspace:*",
     "jest-mock": "^29.4.3",
     "postcss": "^8.4.21",
     "storybook": "7.0.0-beta.50",
+    "tailwindcss": "^3.2.7",
     "tsconfig": "workspace:*",
     "vite": "^4.1.2",
     "webpack": "^5.75.0"
