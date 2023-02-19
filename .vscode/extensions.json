@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "vincaslt.highlight-matching-tag",
+    "wix.vscode-import-cost",
+    "unifiedjs.vscode-mdx",
+    "esbenp.prettier-vscode",
+    "usernamehw.errorlens"
+  ]
+}
