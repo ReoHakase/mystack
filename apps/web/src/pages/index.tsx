@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from '@next/font/google';
+import styles from '../styles/Home.module.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -40,23 +40,29 @@ export default function Home() {
         </div>
 
         <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+          <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
           <div className={styles.thirteen}>
+            <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+          </div>
+          <figure className={'ml:80 mr:5'}>
             <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
+              className={'block hidden@light'}
+              src="/css-logotype@dark.svg"
+              alt="Master CSS Logo, a dark version"
+              width={380}
+              height={48}
               priority
             />
-          </div>
+            <Image
+              className={'hidden block@light'}
+              src="/css-logotype@light.svg"
+              alt="Master CSS Logo, a light version"
+              width={380}
+              height={48}
+              priority
+            />
+          </figure>
+          <div className={styles.thirteen + ' font:40 font:sans font:bold'}>2</div>
         </div>
 
         <div className={styles.grid}>
@@ -69,9 +75,7 @@ export default function Home() {
             <h2 className={inter.className}>
               Docs <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
+            <p className={inter.className}>Find in-depth information about Next.js features and&nbsp;API.</p>
           </a>
 
           <a
@@ -83,9 +87,7 @@ export default function Home() {
             <h2 className={inter.className}>
               Learn <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
+            <p className={inter.className}>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
           </a>
 
           <a
@@ -97,9 +99,7 @@ export default function Home() {
             <h2 className={inter.className}>
               Templates <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
+            <p className={inter.className}>Discover and deploy boilerplate example Next.js&nbsp;projects.</p>
           </a>
 
           <a
@@ -111,13 +111,10 @@ export default function Home() {
             <h2 className={inter.className}>
               Deploy <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
+            <p className={inter.className}>Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel.</p>
           </a>
         </div>
       </main>
     </>
-  )
+  );
 }
