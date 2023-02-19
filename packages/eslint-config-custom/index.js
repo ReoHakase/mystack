@@ -1,12 +1,24 @@
-// Install `next` to the root of the project in order to avoid the following error:
-// > error - ESLint: Failed to load config "next/babel" to extend from.
-// Refer: https://github.com/vercel/next.js/issues/40687
-// Sadly, this is an only workaround for now.
-
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ['next', 'turbo', 'prettier', 'next/babel', 'next/core-web-vitals'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'turbo',
+    'prettier',
+  ],
+  parser: '@typescript-eslint/parser',
+  ignorePatterns: ['.turbo', 'node_modules', '**/*.js', '**/*.mjs', '**/*.jsx'],
   rules: {
-    '@next/next/no-html-link-for-pages': 'off',
-    'react/jsx-key': 'off',
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          order: 'asc',
+        },
+      },
+    ],
+    'import/prefer-default-export': 'off',
   },
 };
