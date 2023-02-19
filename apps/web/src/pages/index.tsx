@@ -39,30 +39,37 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
-          <div className={styles.thirteen}>
-            <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className={'flex flex:col jc:center ai:center gap:16 my:16'}>
+          <div className="flex flex:col jc:center ai:center gap:8 {flex:row;gap:40}@md">
+            <div className="flex flex:row jc:center ai:center gap:0">
+              <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
+              <div className={styles.thirteen}>
+                <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+              </div>
+            </div>
+            <div className="flex flex:row jc:center ai:center gap:0">
+              <Image
+                className={'block hidden@light'}
+                src="/css-logotype@dark.svg"
+                alt="Master CSS Logo, a dark version"
+                width={380}
+                height={48}
+                priority
+              />
+              <Image
+                className={'hidden block@light'}
+                src="/css-logotype@light.svg"
+                alt="Master CSS Logo, a light version"
+                width={380}
+                height={48}
+                priority
+              />
+              <div className={styles.thirteen + ' font:40 font:sans font:bold'}>2</div>
+            </div>
           </div>
-          <figure className={'ml:80 mr:5'}>
-            <Image
-              className={'block hidden@light'}
-              src="/css-logotype@dark.svg"
-              alt="Master CSS Logo, a dark version"
-              width={380}
-              height={48}
-              priority
-            />
-            <Image
-              className={'hidden block@light'}
-              src="/css-logotype@light.svg"
-              alt="Master CSS Logo, a light version"
-              width={380}
-              height={48}
-              priority
-            />
-          </figure>
-          <div className={styles.thirteen + ' font:40 font:sans font:bold'}>2</div>
+          <p className="block font:sans font:16 fg:gold-70 fg:gold-90@dark">
+            This is an example of Next13 with MasterCSS
+          </p>
         </div>
 
         <div className={styles.grid}>
