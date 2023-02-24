@@ -19,7 +19,7 @@ const Home: NextPage = () => (
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>pages/index.tsx</code>
-          <span className="text-cyan-700 dark:text-cyan-300">&nbsp;with Tailwind CSS</span>
+          <span className="text-cyan-700 dark:text-cyan-300"> with Tailwind CSS</span>
         </p>
         <div>
           <a
@@ -33,10 +33,21 @@ const Home: NextPage = () => (
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+      <div className={`flex-col gap-4 ${styles.center}`}>
+        <figure className="flex flex-row items-center gap-4">
+          <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
+          <div className={styles.thirteen}>
+            <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+          </div>
+        </figure>
+        <div className="flex flex-col items-center relative z-10">
+          <p className="font-mono uppercase font-bold tracking-widest text-xl">mystack</p>
+          <a
+            href="https://github.com/ReoHakase/mystack"
+            className="font-mono underline uppercase font-bold tracking-widest text-sm relative"
+          >
+            https://github.com/ReoHakase/mystack
+          </a>
         </div>
       </div>
 
