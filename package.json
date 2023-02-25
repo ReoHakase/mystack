@@ -17,7 +17,7 @@
     "eslint-config-custom": "workspace:*",
     "eslint-config-prettier": "8.6.0",
     "prettier": "2.8.4",
-    "scaffdog": "2.4.0",
+    "scaffdog": "2.5.0",
     "turbo": "1.8.2"
   },
   "engines": {
