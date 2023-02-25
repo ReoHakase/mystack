@@ -54,7 +54,7 @@ jobs:
   #         filters: .github/filter.yml
 
   # Main job
-  lint:
+  build:
     runs-on: ubuntu-latest
     # needs: filter
     # if: ${{ needs.filter.outputs.hasChanged == 'true' }}
