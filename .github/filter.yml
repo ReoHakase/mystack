@@ -1,0 +1,27 @@
+# root
+root:
+  # Common dependencies
+  - .github/filter.yml
+  - .npmrc
+  - package.json
+  - pnpm-workspace.yaml
+  - turbo.json
+
+  # Unique dependencies
+  - .github/workflows/root_*.yml
+  - apps/**/*
+  - packages/**/*
+
+# apps/web
+web:
+  # Common dependencies
+  - .github/filter.yml
+  - .npmrc
+  - package.json
+  - pnpm-workspace.yaml
+  - turbo.json
+
+  # Unique dependencies
+  - .github/workflows/app_*.yml
+  - apps/web/**/*
+  - packages/**/* # Ideally, only packages that apps/web depends on should be listed
