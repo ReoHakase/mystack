@@ -1,0 +1,98 @@
+name: Lint entire project (root)
+
+on:
+  - push
+  - pull_request
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
+jobs:
+  # Detects if any files specified in `filter` have changed
+  # and sets the `app` output variable to `true` if so.
+  # This is used to skip the job if no files have changed.
+  # Refer: https://github.com/dorny/paths-filter
+  filter:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      # This is the output variable that is used to skip the job
+      # Make sure `steps.changes.outputs.*` matches the filter name in `.github/filter.yml
+      hasChanged: ${{ steps.changes.outputs.root }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check for file changes
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          # Personal access token used to fetch a list of changed files
+          # from GitHub REST API.
+          # It's only used if action is triggered by a pull request event.
+          # GitHub token from workflow context is used as default value.
+          # If an empty string is provided, the action falls back to detect
+          # changes using git commands.
+          # Default: ${{ github.token }}
+          token: ${{ github.token }}
+
+          # Defines filters applied to detected changed files.
+          # Each filter has a name and a list of rules.
+          # Rule is a glob expression - paths of all changed
+          # files are matched against it.
+          # Rule can optionally specify if the file
+          # should be added, modified, or deleted.
+          # For each filter, there will be a corresponding output variable to
+          # indicate if there's a changed file matching any of the rules.
+          # Optionally, there can be a second output variable
+          # set to list of all files matching the filter.
+          # Filters can be provided inline as a string (containing valid YAML document),
+          # or as a relative path to a file (e.g.: .github/filters.yaml).
+          # Filters syntax is documented by example - see examples section.
+          filters: .github/filter.yml
+
+  # Main job
+  lint:
+    runs-on: ubuntu-latest
+    needs: filter
+    if: ${{ needs.filter.outputs.hasChanged == 'true' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          # The action will look for `volta.node` first. If `volta.node` isn't defined, then it will look for `engines.node`
+          # Refer: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#node-version-file
+          node-version-file: 'package.json'
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.4
+        id: pnpm-install
+        with:
+          run_install: false
+          version: 7.21.0 # Make sure this matches the version in package.json
+
+      - name: Get PNPM store
+        id: pnpm-cache
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup PNPM cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint with ESLint
+        run: pnpm turbo lint -- --max-warnings=0
+
+      # - name: Format with Prettier
+      # run: pnpm turbo fmt
