@@ -5,17 +5,16 @@
   "schedule": ["after 10pm and before 5am every weekend"],
   "dependencyDashboard": true,
   "automerge": true,
+  "rangeStrategy": "pin",
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "groupName": "devDependencies",
-      "rangeStrategy": "pin"
+      "groupName": "devDependencies"
     },
     {
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "Minor dependencies",
-      "rangeStrategy": "pin"
+      "groupName": "Minor dependencies"
     }
   ]
 }
