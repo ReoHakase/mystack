@@ -10,7 +10,7 @@ importers:
       husky: 8.0.3
       lint-staged: ^13.1.2
       prettier: 2.8.4
-      scaffdog: 2.4.0
+      scaffdog: 2.5.0
       turbo: 1.8.2
     devDependencies:
       eslint: 8.34.0
@@ -19,7 +19,7 @@ importers:
       husky: 8.0.3
       lint-staged: 13.1.2
       prettier: 2.8.4
-      scaffdog: 2.4.0
+      scaffdog: 2.5.0
       turbo: 1.8.2
 
   apps/web:
@@ -2125,19 +2125,19 @@ packages:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: false
 
-  /@scaffdog/config/2.4.0:
-    resolution: {integrity: sha512-hAa54XR5ySe6MfwtrDuR+dwVMVdEnKYDYIShxgZznkWJSDTmJtMFlP8wksIBz1Co9z7zZXWrxU94A4T0OA8kIQ==}
+  /@scaffdog/config/2.5.0:
+    resolution: {integrity: sha512-jXE8cuFkJzp3mMkzANB3gsTYjNzQqfvTdqA8/a4+wVp/DX52Uy/Vz98S7xeUcky+IB0J8NtRsvA29kz3H2PQPg==}
     dependencies:
-      '@scaffdog/types': 2.4.0
+      '@scaffdog/types': 2.5.0
       jiti: 1.17.1
       zod: 3.20.6
     dev: true
 
-  /@scaffdog/core/2.4.0:
-    resolution: {integrity: sha512-87hmYgSB/PLHvMOpt0f8Gr/3BI/STAMaMIiDYwbDeNBGbcyPg5Wb/rM3rbKB5hByL6FIQs1L+XJZOPWsipJ5Bw==}
+  /@scaffdog/core/2.5.0:
+    resolution: {integrity: sha512-Usc8tWY6R8TxMXgYNkXe71+w1nLNNSr0JSPQf+05UoZQIdfOz7mm3IEb1ZkylT2n+Sg7pkwwbQKX34prXnXqqg==}
     dependencies:
-      '@scaffdog/engine': 2.4.0
-      '@scaffdog/types': 2.4.0
+      '@scaffdog/engine': 2.5.0
+      '@scaffdog/types': 2.5.0
       mdast-util-to-string: 2.0.0
       remark-parse: 9.0.0
       unified: 9.2.2
@@ -2146,11 +2146,11 @@ packages:
       - supports-color
     dev: true
 
-  /@scaffdog/engine/2.4.0:
-    resolution: {integrity: sha512-S9ibYtwZ/hzW3O0tTEXncYEP1P66GvJOSY4VTDoviY6+r9y1I4tY0Ut9/4kwayzI2K3Q5VMSUqzKsbiDT4x+sg==}
+  /@scaffdog/engine/2.5.0:
+    resolution: {integrity: sha512-JylbubPp5TpuBglH9sW8PJC1NftuIkxUUL2OL+2M8/dLZDt61HM0m2tvM3dew3cmvGsXu8r2prByiNgT3JBPvg==}
     dependencies:
-      '@scaffdog/error': 2.4.0
-      '@scaffdog/types': 2.4.0
+      '@scaffdog/error': 2.5.0
+      '@scaffdog/types': 2.5.0
       change-case: 4.1.2
       dayjs: 1.11.7
       is-plain-object: 5.0.0
@@ -2158,18 +2158,18 @@ packages:
       safe-eval: 0.4.1
     dev: true
 
-  /@scaffdog/error/2.4.0:
-    resolution: {integrity: sha512-Zj2o/IFY5iWtLbjttKCYwZtzK73HbhC3ylegf+ytjChDORDYMvWyCo2ZJvYfSU+xJPjvsUfGGlFnXxC2VyY0bA==}
+  /@scaffdog/error/2.5.0:
+    resolution: {integrity: sha512-aFKzVFAnRnuER3XWlOLjBh+Dm1+XoJDDf14O8efTha48Uw8uNd/YHcLom6bYv1eZQtkLuJFA7y4ttVBcV/PPfQ==}
     dependencies:
-      '@scaffdog/types': 2.4.0
+      '@scaffdog/types': 2.5.0
       chalk: 4.1.2
       string-length: 4.0.2
     dev: true
 
-  /@scaffdog/types/2.4.0:
-    resolution: {integrity: sha512-VcwDK+YxNRrc/QV7BgnfTN4vP37xu6YNbYiuoycC9E8A0d8VFc03/CB6cUf4+e7uRs9q2dxE9YctJK2mAArhRA==}
+  /@scaffdog/types/2.5.0:
+    resolution: {integrity: sha512-WCcPDiWw8P88MhUkWHMSPs1gF/EYEY8BmUBCfdZjqU3NHQ4HLXzYlqbBx2yWUsrAySbUCGj5sJqKSO3Yf3w/+A==}
     dependencies:
-      type-fest: 2.19.0
+      type-fest: 3.6.0
     dev: true
 
   /@sinclair/typebox/0.25.23:
@@ -9898,15 +9898,15 @@ packages:
       webpack: 5.75.0_esbuild@0.16.17
     dev: true
 
-  /scaffdog/2.4.0:
-    resolution: {integrity: sha512-IDCi03hiUa4AKbzfsTbf9Zvsw44kqQ5Jedhp3WnjyaUPtBY2e87pJzdDHk8aYhLdOWIu1YDawc1DFhdEFb/ntQ==}
+  /scaffdog/2.5.0:
+    resolution: {integrity: sha512-5TmoB25CdxWS1LhObK36LC5e8pPW06D+UsKbRhePF76d7gAMSt97u9lfq+mPFy8BA+tNhv+QPPRB0yloC8wpcQ==}
     hasBin: true
     dependencies:
-      '@scaffdog/config': 2.4.0
-      '@scaffdog/core': 2.4.0
-      '@scaffdog/engine': 2.4.0
-      '@scaffdog/error': 2.4.0
-      '@scaffdog/types': 2.4.0
+      '@scaffdog/config': 2.5.0
+      '@scaffdog/core': 2.5.0
+      '@scaffdog/engine': 2.5.0
+      '@scaffdog/error': 2.5.0
+      '@scaffdog/types': 2.5.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-truncate: 2.1.0
@@ -9924,7 +9924,7 @@ packages:
       micromatch: 4.0.5
       node-emoji: 1.11.0
       plur: 4.0.0
-      strip-ansi: 6.0.0
+      strip-ansi: 6.0.1
       term-size: 2.2.1
       update-notifier: 5.1.0
       valid-filename: 3.1.0
@@ -10312,13 +10312,6 @@ packages:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
     dependencies:
       safe-buffer: 5.2.1
-    dev: true
-
-  /strip-ansi/6.0.0:
-    resolution: {integrity: sha512-AuvKTrTfQNYNIctbR1K/YGTR1756GycPsg7b9bdV9Duqur4gv6aKqHXah67Z8ImS7WEz5QVcOtlfW2rZEugt6w==}
-    engines: {node: '>=8'}
-    dependencies:
-      ansi-regex: 5.0.1
     dev: true
 
   /strip-ansi/6.0.1:
@@ -10842,6 +10835,11 @@ packages:
   /type-fest/2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  /type-fest/3.6.0:
+    resolution: {integrity: sha512-RqTRtKTzvPpNdDUp1dVkKQRunlPITk4mXeqFlAZoJsS+fLRn8AdPK0TcQDumGayhU7fjlBfiBjsq3pe3rIfXZQ==}
+    engines: {node: '>=14.16'}
     dev: true
 
   /type-is/1.6.18:
