@@ -6,5 +6,12 @@
     "base.json",
     "nextjs.json",
     "react-library.json"
-  ]
+  ],
+  "scripts": {
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+    "devDependencies": {
+    "prettier": "2.8.4"
+  }
 }

@@ -7,15 +7,16 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "prepare": "husky install",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "devDependencies": {
     "eslint": "8.34.0",
     "eslint-config-custom": "workspace:*",
     "eslint-config-prettier": "8.6.0",
+    "husky": "8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "2.8.4",
     "scaffdog": "2.4.0",
     "turbo": "1.8.2"
