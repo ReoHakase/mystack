@@ -95,6 +95,7 @@ importers:
       eslint-config-prettier: ^8.3.0
       eslint-config-turbo: latest
       eslint-plugin-import: ^2.27.5
+      prettier: 2.8.4
       typescript: ^4.7.4
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.52.0_2facupdxlvm55gtp63dnpqcawi
@@ -106,6 +107,8 @@ importers:
       eslint-config-turbo: 0.0.8_eslint@8.34.0
       eslint-plugin-import: 2.27.5_mcvs2y73sfmcxqzpjj5lr7a2m4
       typescript: 4.9.4
+    devDependencies:
+      prettier: 2.8.4
 
   packages/eslint-config-custom-next:
     specifiers:
@@ -123,6 +126,7 @@ importers:
       eslint-plugin-react: 7.32.2
       eslint-plugin-react-hooks: ^4.6.0
       eslint-plugin-storybook: ^0.6.10
+      prettier: 2.8.4
       typescript: ^4.7.4
     dependencies:
       '@next/eslint-plugin-next': 13.1.6
@@ -140,19 +144,26 @@ importers:
       eslint-plugin-react-hooks: 4.6.0_eslint@8.34.0
       eslint-plugin-storybook: 0.6.10_ehfyfk7qbmgzg5nk6xmobqdh3a
       typescript: 4.9.4
+    devDependencies:
+      prettier: 2.8.4
 
   packages/tsconfig:
-    specifiers: {}
+    specifiers:
+      prettier: 2.8.4
+    devDependencies:
+      prettier: 2.8.4
 
   packages/utils:
     specifiers:
       eslint: 7.32.0
       eslint-config-custom: workspace:*
+      prettier: 2.8.4
       tsconfig: workspace:*
       typescript: 4.9.5
     devDependencies:
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
+      prettier: 2.8.4
       tsconfig: link:../tsconfig
       typescript: 4.9.5
 
