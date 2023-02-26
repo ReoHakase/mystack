@@ -19,7 +19,7 @@ const Home: NextPage = () => (
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>pages/index.tsx</code>
-          <span className="text-cyan-700 dark:text-cyan-300"> with Tailwind CSS</span>
+          <span className="text-cyan-11"> with Tailwind CSS</span>
         </p>
         <div>
           <a

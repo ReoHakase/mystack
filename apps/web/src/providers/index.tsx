@@ -6,5 +6,5 @@ type AppProviderProps = {
 };
 
 export const AppProvider: FC<AppProviderProps> = ({ children }) => (
-  <ThemeProvider attribute="class">{children}</ThemeProvider>
+  <ThemeProvider attribute="data-theme">{children}</ThemeProvider>
 );
