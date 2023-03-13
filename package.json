@@ -22,8 +22,8 @@
     "turbo": "1.8.3"
   },
   "engines": {
-    "node": ">=18.0.0 <19",
-    "pnpm": ">=7.0.0"
+    "node": "18.15.0",
+    "pnpm": "7.29.1"
   },
   "packageManager": "pnpm@7.28.0",
   "volta": {
