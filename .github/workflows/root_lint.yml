@@ -73,8 +73,10 @@ jobs:
         uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
+          # Version of pnpm to install:
+          # Optional when there is a packageManager field in the package.json.
+          # Refer: https://github.com/pnpm/action-setup#inputs
           run_install: false
-          version: 7.21.0 # Make sure this matches the version in package.json
 
       - name: Get PNPM store
         id: pnpm-cache
