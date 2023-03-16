@@ -15,6 +15,13 @@
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Minor dependencies"
+    },
+    {
+      "description": "Ignore node and pnpm in engines in package.json",
+      "matchPackageNames": ["node", "pnpm"],
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
     }
   ]
 }
