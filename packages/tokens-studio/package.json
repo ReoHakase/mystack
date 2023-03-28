@@ -26,14 +26,14 @@
   "devDependencies": {
     "@types/node": "18.15.3",
     "esbuild": "0.17.11",
-    "eslint": "7.32.0",
+    "eslint": "8.36.0",
     "eslint-config-custom": "workspace:*",
     "sd-tailwindcss-transformer": "1.2.0",
     "style-dictionary": "3.7.2",
     "tailwindcss": "3.2.7",
     "token-transformer": "0.0.30",
     "tsconfig": "workspace:*",
-    "typescript": "4.9.5"
+    "typescript": "5.0.2"
   },
   "dependencies": {
     "zod": "3.21.4"
