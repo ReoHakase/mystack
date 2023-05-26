@@ -10,11 +10,11 @@
     "format:fix": "prettier --write ."
   },
   "devDependencies": {
-    "eslint": "8.38.0",
+    "eslint": "8.41.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "5.0.4",
-    "prettier": "2.8.7"
+    "prettier": "2.8.8"
 
   }
 }
