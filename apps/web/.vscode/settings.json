@@ -7,5 +7,23 @@
   "eslint.options": {
     "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
   },
+  // An intellisense matcher setting for Tailwind Variants
+  // Refer: https://www.tailwind-variants.org/docs/getting-started#intellisense-setup-optional
+  "tailwindCSS.experimental.classRegex": [
+    // Inside tv function
+    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    // Inside cva function
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    // String after /* tw */ e.g. /* tw */ 'text-red-500'
+    ["\\/\\*\\s?tw\\s?\\*\\/\\s*[\\\"'`]([^\\\"'`]*).*?[\\\"'`]"]
+  ],
+
+  // By default VS Code will not trigger completions when editing "string" content, for example within JSX attribute values.
+  // This setting enables quick completions in string content.
+  // It may help improve tailwindcss DX.
+  // Refer: https://github.com/tailwindlabs/tailwindcss-intellisense#editorquicksuggestions
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "eslint.validate": ["markdown", "mdx", "javascript", "javascriptreact", "typescript", "typescriptreact"]
 }
