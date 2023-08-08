@@ -1,0 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Configure color and font setting for Storybook */
+body {
+  @apply bg-keyplate-2 text-keyplate-12;
+}

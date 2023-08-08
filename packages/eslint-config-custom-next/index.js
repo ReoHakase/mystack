@@ -1,28 +1,51 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'airbnb',
-    'airbnb-typescript',
-    'turbo',
-    'prettier',
-    'plugin:@next/next/recommended',
-    'plugin:@next/next/core-web-vitals',
-    'plugin:storybook/recommended',
-  ],
-  rules: {
-    '@next/next/no-html-link-for-pages': 'off',
-    'react/jsx-key': 'off',
+  $schema: 'https://json.schemastore.org/eslintrc',
+  env: {
+    es6: true,
+    browser: true,
+    jest: true,
   },
+  extends: [
+    'airbnb-typescript',
+    'eslint:recommended',
+    'prettier',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
+    'next',
+    'plugin:react/recommended',
+    'plugin:tailwindcss/recommended',
+  ],
+  plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'tailwindcss', 'import', 'prettier'],
   parser: '@typescript-eslint/parser',
-  ignorePatterns: ['.next', '.turbo', 'node_modules', '**/*.js', '**/*.mjs', '**/*.jsx'],
+  parserOptions: {
+    project: './tsconfig.json',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
   rules: {
-    'react/jsx-uses-react': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
-    'react/no-danger': 'off',
+    'import/extensions': ['error', 'never'],
+    'import/no-default-export': 'error',
+    'import/no-extraneous-dependencies': ['error', { packageDir: ['./'] }],
+    'import/order': [
+      'error',
+      {
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+            position: 'before',
+          },
+        ],
+        alphabetize: {
+          order: 'asc',
+        },
+      },
+    ],
+    'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -31,14 +54,44 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'import/order': [
-      'error',
-      {
-        alphabetize: {
-          order: 'asc',
-        },
-      },
-    ],
-    'import/prefer-default-export': 'off',
+    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-danger': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
   },
+  overrides: [
+    {
+      files: ['./*'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+        'import/no-default-export': 'off',
+        'import/prefer-default-export': 'off',
+      },
+    },
+    {
+      files: ['./src/app/**'],
+      rules: {
+        'import/no-default-export': 'off',
+        'import/prefer-default-export': 'error',
+      },
+    },
+    {
+      files: ['./src/**/*.story.*', './src/**/*.stories.*'],
+      rules: {
+        'import/no-default-export': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'import/prefer-default-export': 'off',
+      },
+    },
+    {
+      // Disable react and a11y rules for API router
+      files: ['./src/app/api/**', './src/pages/api/**'],
+      rules: {
+        'import/no-default-export': 'off',
+        'jsx-a11y/alt-text': 'off',
+        '@next/next/no-img-element': 'off',
+      },
+    },
+  ],
 };

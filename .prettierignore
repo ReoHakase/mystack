@@ -46,7 +46,3 @@ yarn-error.log*
 # Since renovate automatically updates these files, we don't want to format them
 package.json
 pnpm-lock.yaml
-
-# Ignore apps and packages since its code should be handled with its own configuration.
-apps
-packages

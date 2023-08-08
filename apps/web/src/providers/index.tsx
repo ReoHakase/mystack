@@ -1,3 +1,5 @@
+'use client';
+
 import { ThemeProvider } from 'next-themes';
 import type { FC, ReactNode } from 'react';
 
