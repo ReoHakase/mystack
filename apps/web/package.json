@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "storybook": "storybook dev -p 6006",
+    "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
@@ -20,7 +20,6 @@
     "@vercel/analytics": "^1.0.1",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
-    "i": "^0.3.7",
     "next": "13.4.12",
     "next-themes": "0.2.1",
     "pnpm": "^8.6.12",
@@ -34,13 +33,14 @@
   },
   "devDependencies": {
     "@babel/core": "7.22.9",
+    "@storybook/addon-a11y": "^7.2.1",
     "@storybook/addon-essentials": "7.2.1",
     "@storybook/addon-interactions": "7.2.1",
     "@storybook/addon-links": "7.2.1",
+    "@storybook/addon-viewport": "^7.2.1",
     "@storybook/blocks": "7.2.1",
     "@storybook/nextjs": "7.2.1",
     "@storybook/react": "7.2.1",
-    "@storybook/react-vite": "7.2.1",
     "@storybook/testing-library": "0.2.0",
     "autoprefixer": "10.4.14",
     "eslint-config-custom-next": "workspace:*",
@@ -52,7 +52,6 @@
     "tokens-studio": "workspace:*",
     "tsconfig": "workspace:*",
     "tw-colors": "2.0.3",
-    "vite": "4.4.8",
     "webpack": "5.88.2"
   }
 }
