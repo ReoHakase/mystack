@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "name": "mystack",
+      "path": "."
+    },
+    {
+      "name": "web",
+      "path": "apps/web"
+    }
+  ]
+}

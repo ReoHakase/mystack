@@ -2,11 +2,21 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
-    "baseUrl": "./src",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./",
+    "ignoreDeprecations": "5.0",
     "paths": {
-      "@/*": ["*"]
-    }
+      "@/*": ["./src/*"],
+      "#cms/*": ["../../packages/cms/src/*"],
+      "#model/*": ["../../packages/model/src/*"],
+      "@public/*": ["./public/*"]
+    },
+    "rootDir": "./"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "next.config.js", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

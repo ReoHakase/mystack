@@ -1,6 +1,6 @@
 import { extendTailwindMerge } from 'tailwind-merge';
 
-export const twMerge = extendTailwindMerge({
+const twMerge = extendTailwindMerge({
   // ↓ Add values to existing theme scale or create a new one
   // theme: {
   //   spacing: ['sm', 'md', 'lg'],
@@ -15,3 +15,5 @@ export const twMerge = extendTailwindMerge({
   //   foo: ['bar'],
   // },
 });
+
+export const cn = twMerge;

@@ -13,18 +13,24 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@next/font": "13.4.12",
+    "@t3-oss/env-nextjs": "^0.6.0",
     "@types/node": "18.17.3",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
+    "@vercel/analytics": "^1.0.1",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "i": "^0.3.7",
     "next": "13.4.12",
     "next-themes": "0.2.1",
+    "pnpm": "^8.6.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
     "tailwind-merge": "1.14.0",
-    "typescript": "5.1.6"
+    "tailwind-variants": "^0.1.13",
+    "typescript": "5.1.6",
+    "zod": "3.21.4"
   },
   "devDependencies": {
     "@babel/core": "7.22.9",
@@ -41,11 +47,12 @@
     "jest-mock": "29.6.2",
     "postcss": "8.4.27",
     "storybook": "7.2.1",
+    "tailwind-scrollbar": "^3.0.5",
     "tailwindcss": "3.3.3",
+    "tokens-studio": "workspace:*",
     "tsconfig": "workspace:*",
     "tw-colors": "2.0.3",
     "vite": "4.4.8",
-    "webpack": "5.88.2",
-    "tokens-studio": "workspace:*"
+    "webpack": "5.88.2"
   }
 }
