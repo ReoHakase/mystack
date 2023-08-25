@@ -1,3 +1,8 @@
+# 💽 ReoHakase/mystack
+A monorepo starter that includes Next 13 app
+![Frame 2](https://github.com/ReoHakase/mystack/assets/16751535/ec4d1314-0059-4a35-89b8-786cfaaeab53)
+
+
 # Turborepo starter
 
 This is an official pnpm starter turborepo.
