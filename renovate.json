@@ -6,6 +6,9 @@
   "dependencyDashboard": true,
   "automerge": true,
   "rangeStrategy": "pin",
+  "semanticCommitType": "build: 📦 ",
+  "semanticCommitScope": "{{parentDir}}",
+  "semanticCommits": "enabled",
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
