@@ -63,7 +63,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           # The action will look for `volta.node` first. If `volta.node` isn't defined, then it will look for `engines.node`
           # Refer: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#node-version-file
