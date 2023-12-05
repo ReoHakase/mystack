@@ -6,8 +6,7 @@ import type { Config } from 'tailwindcss';
 import tailwindAnimate from 'tailwindcss-animate';
 // import defaultTheme from 'tailwindcss/defaultTheme';
 import { createThemes } from 'tw-colors';
-
-// NOTE: スエイリアスを使うとTailwindが読み込んでくれなくなる
+// NOTE: パスエイリアスを使うとTailwindが読み込んでくれなくなる
 import { coreColors } from './src/styles/tokens/colors/core';
 import { darkColors } from './src/styles/tokens/colors/dark';
 import { lightColors } from './src/styles/tokens/colors/light';
@@ -113,6 +112,9 @@ const config: Config = {
           },
         ],
         small: '0.75rem',
+      },
+      fontFamily: {
+        sans: ['var(--font-shippori-mincho-b1)'],
       },
       lineHeight: {
         medium: '1.55',

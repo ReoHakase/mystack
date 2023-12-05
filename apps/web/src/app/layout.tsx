@@ -4,6 +4,7 @@ import type { FC, ReactNode } from 'react';
 import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Header';
 import { AppProvider } from '@/providers';
+import { shipporiMinchoB1 } from '@/styles/tokens/fonts';
 import '@/styles/globals.css';
 
 type RootLayoutProps = {
@@ -17,7 +18,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
   <html lang="ja" suppressHydrationWarning>
     <head />
     <body
-      className={`flex min-h-screen flex-col bg-keyplate-2 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-keyplate-6 scrollbar-thumb-rounded-full hover:scrollbar-thumb-keyplate-7`}
+      className={`${shipporiMinchoB1.variable} flex min-h-screen flex-col bg-keyplate-2 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-keyplate-6 scrollbar-thumb-rounded-full hover:scrollbar-thumb-keyplate-7`}
     >
       {/* Refer: https://vercel.com/docs/concepts/analytics/quickstart */}
       <Analytics />
