@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "0.7.1",
-    "@types/node": "18.19.2",
+    "@types/node": "20.17.0",
     "@types/react": "18.2.41",
     "@types/react-dom": "18.2.17",
     "@vercel/analytics": "1.1.1",
