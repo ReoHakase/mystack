@@ -84,8 +84,8 @@ importers:
         specifier: 4.12.0
         version: 4.12.0(react@18.2.0)
       tailwind-merge:
-        specifier: 1.14.0
-        version: 1.14.0
+        specifier: 2.6.0
+        version: 2.6.0
       tailwind-variants:
         specifier: 0.1.18
         version: 0.1.18(tailwindcss@3.3.5)
@@ -11678,6 +11678,10 @@ packages:
 
   /tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
+    dev: false
+
+  /tailwind-merge@2.6.0:
+    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
     dev: false
 
   /tailwind-scrollbar@3.0.5(tailwindcss@3.3.5):
